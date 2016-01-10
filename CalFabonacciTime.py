@@ -29,10 +29,11 @@ class ThreadCalFaboTime(threading.Thread):
 
     def calFaboTime(self):
         localTime = time.localtime(time.time())
-        shour = localTime[3]
+        hour = localTime[3]
         minutes = localTime[4]
         seconds = localTime[5]
         #计算时
+        faboHour = hour % 5
 
         #计算分
 
