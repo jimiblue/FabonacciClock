@@ -12,7 +12,7 @@ class ShowDlg(QtWidgets.QWidget, ClockDlg):
         #开始时间转换
         self.calTime = CalFabonacciTime.ThreadCalFaboTime(0, 1)
         #绑定信号
-        self.calTime.signal.signalChangeColor.connect(self.changeColor)
+        self.calTime.signalChangeColor.connect(self.changeColor)
         self.calTime.start()
         #主界面GridLayout全覆盖
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -48,6 +48,8 @@ class ShowDlg(QtWidgets.QWidget, ClockDlg):
             self.setLabelColor(label, type)
         GlobalVar.resetGlobalVar()
 
+    def test(self):
+        print("hello emit ")
 
 # #显示
 app = QtWidgets.QApplication(sys.argv)

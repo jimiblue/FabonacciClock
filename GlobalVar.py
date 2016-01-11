@@ -1,13 +1,5 @@
 #!/user/bin/python
 #-*- coding:utf-8 -*-
-from PyQt5 import QtCore
-
-#信号类，存储所有跨线程非QObject父类的信号
-class Signal(QtCore.QObject):
-    signalChangeColor = QtCore.pyqtSignal()
-
-    def emitChangeColor(self):
-        self.signalChangeColor.emit()
 
 #存储F label的状态字典
 labelF = {"F1_1": 0,
