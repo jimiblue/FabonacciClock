@@ -9,14 +9,14 @@ from PyQt5 import QtCore
 #线程启动时间计算，讲时间转换为Fabonacci数值
 #num 线程运行次数，0 ：无限运行 -1:停止运行
 #interval 线程间隔时间
-class ThreadCalFaboTime(threading.Thread):
-
+class ThreadCalFaboTime(threading.Thread, QtCore.QObject):
+    signalChangeColor = QtCore.pyqtSignal()
     def __init__(self, num, interval):
         threading.Thread.__init__(self)
+        QtCore.QObject.__init__(self)
         self.num = num
         self.threadStop = False
         self.interval = interval
-        self.signal = GlobalVar.Signal()
 
     def run(self):
         while not self.threadStop:
@@ -44,5 +44,5 @@ class ThreadCalFaboTime(threading.Thread):
             key = "S_%s"%(seconds)
         GlobalVar.labelS[key] = 3
         #发射信号
-        self.signal.emitChangeColor()
+        self.signalChangeColor.emit()
 
