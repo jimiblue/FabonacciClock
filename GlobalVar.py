@@ -1,7 +1,7 @@
 #!/user/bin/python
 #-*- coding:utf-8 -*-
 
-#存储F label的状态字典
+#存储F label的状态字典 0:无 1：时 2：分 3：时和分
 labelF = {"F1_1": 0,
           "F1_2": 0,
           "F_3": 0,

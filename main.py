@@ -46,7 +46,6 @@ class ShowDlg(QtWidgets.QWidget, ClockDlg):
             self.setLabelColor(label, type)
         for (label, type) in GlobalVar.labelF.items():
             self.setLabelColor(label, type)
-        GlobalVar.resetGlobalVar()
 
     def test(self):
         print("hello emit ")
