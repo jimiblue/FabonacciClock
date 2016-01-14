@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets, QtCore, QtGui
 from ClockUi import Ui_Dialog as ClockDlg
 import GlobalVar
 import CalFabonacciTime
@@ -20,9 +20,9 @@ class ShowDlg(QtWidgets.QWidget, ClockDlg):
         self.gridLayout.setSpacing(1)
         #窗口设置
         self.setWindowTitle("FabonacciClock")
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setStyleSheet("background-color:black;")
-        self.resize(460, 320)
+        self.resize(600, 420)
         #self.setWindowState(QtCore.Qt.WindowFullScreen)
         #self.setWindowState(QtCore.Qt.WindowMaximized)
 

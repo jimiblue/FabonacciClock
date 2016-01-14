@@ -1,4 +1,4 @@
-from ClockDlg  import ShowDlg
+from ClockDlg import ShowDlg
 from PyQt5 import QtWidgets
 import sys
 
